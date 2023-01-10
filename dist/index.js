@@ -3419,7 +3419,7 @@ function getCWD() {
 }
 
 async function hasChanged(pathsToSearch, commits) {
-  const paths = pathsToSearch.split(' ')
+  const paths = pathsToSearch.split('|')
 
   //  --quiet: exits with 1 if there were differences (https://git-scm.com/docs/git-diff)
   const exitCode = await exec.exec('git', [
